@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-20.04 # 仮想環境の種類
 
     steps: # 実行すること
-      - uses: actions/checkout@3
+      - uses: actions/checkout@v3
       - name: ubuntu-ni-deploy
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
