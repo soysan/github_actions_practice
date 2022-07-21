@@ -21,7 +21,9 @@ jobs:
 #          host: ${{ secrets.FTP_SERVER }}
 #          port: 22
           ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local_path: './*'
+          remote_path: '/test/'
 #          password: ${{ secrets.FTP_PASSWORD }}
 #          server-dir: ${{ secrets.FTP_SERVER_DIR }}
-          localPath: './*'
-          remotePath: '/test/'
+#          localPath: './*'
+#          remotePath: '/test/'
