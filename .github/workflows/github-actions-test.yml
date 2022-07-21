@@ -12,9 +12,14 @@ jobs:
     steps: # 実行すること
       - uses: actions/checkout@v3
       - name: ubuntu-ni-deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+#        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        uses: Creepios/sftp-action@v1.0.3
         with:
-          server: ${{ secrets.FTP_SERVER }}
+#          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}
+          port: 22
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+#          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          localPath: './'
+          remotePath: '/test/'
